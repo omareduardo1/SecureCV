@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contatti - Secure Dinamic CV</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+</head>
+<body>
+    <!-- Header -->
+    <header class="hero">
+        <div class="header-nav">
+            <a href="index.html" class="nav-button"> ← Home </a>
+            <h1 class="hero-title"> Contatti </h1>
+            <a href="login.php" class="nav-button"> Login → </a>
+        </div>
+
+        <!-- Contatti -->
+        <section class="contact-section">
+            <div class="contact-box">
+                <h2> Scrivimi un messaggio </h2>
+                <form action="contact_form.php" method="POST" id="contactForm">
+                    <div class="name-row">
+                        <div class="half">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" required />
+                        </div>
+                        <div class="half">
+                            <label for="cognome">Cognome:</label>
+                            <input type="text" id="cognome" name="cognome" required />
+                        </div>
+                    </div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="messaggio">Messaggio:</label>
+                    <textarea id="messaggio" name="messaggio" rows="8" required></textarea>
+
+                    <button type="submit">Invia</button>
+            </form>
+            </div>
+            <div class="social-icons">
+                <a
+                  href="https://www.linkedin.com/in/omareduardoborgesmontero/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="https://github.com/omareduardo1/" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="mailto:borgesomar02@email.com"
+                  ><i class="fas fa-envelope"></i
+                ></a>
+            </div>
+        </section>
+    </header>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p style="color: black;">
+            Non hai un account? <a href="register.html">Registrati</a>
+        </p>
+        <p style="color: black;">
+            Hai un account? <a href="login.php">Accedi</a>
+        </p>
+        <p class="footer-copy" style="color: black;">
+            &copy; 2025 Omar Eduardo Borges Montero. Tutti i diritti riservati.
+        </p>
+    </footer>
+</body>
+</html>

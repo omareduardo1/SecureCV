@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Secure Dinamic CV </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <!-- Cookie Banner -->
+        <div id="cookie-banner" class="cookie-banner" style="display: none;">
+            <p>Questo sito utilizza cookie per migliorare l’esperienza utente.</p>
+            <button onclick="acceptCookies()">Accetta</button>
+        </div>
+
+        <!-- Sezione principale -->
+        <header class="hero">
+            <div class="header-nav">
+                <h1 class="hero-title"> Omar Eduardo Borges Montero </h1>
+                <a href="register.html" class="nav-button"> Registrati </a>
+            </div>
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="Images/FotoOmar.JPG" alt="Omar Eduardo Borges Montero" class="hero-photo">
+                </div>
+                <p class="hero-text-block">
+                    Ciao, mi chiamo Omar Eduardo Borges Montero. Ho 23 anni e sono laureato in Scienze e Tecnologie Multimediali. Attualmente sto completando il mio percorso magistrale in Comunicazione Multimediale e Tecnologie dell’Informazione, con una specializzazione in Artificial Intelligence, Industrial Automation & Internet of Things.
+                    Questo sito è il mio spazio personale dove puoi trovare il mio curriculum aggiornato, il mio percorso accademico dettagliato, le certificazioni ottenute, le competenze sviluppate e una pagina dedicata ai contatti, completa di tutti i miei profili social.<br>
+                    
+                    <br>Di me posso dirti che sono una persona ambiziosa, determinata e con una grande voglia di crescere e mettere in pratica le mie capacità. Cerco sempre di mettermi in gioco con nuove idee e attività, partecipando a progetti di startup e seguendo corsi di formazione in diverse aree per ampliare le mie competenze e rimanere aggiornato con le tecnologie più innovative.
+                    Sono abituato a lavorare in contesti dinamici e internazionali, grazie alle esperienze Erasmus che ho già vissuto e che continuerò a intraprendere. Questo mi ha permesso di sviluppare un’ottima capacità di adattamento e un approccio flessibile ai cambiamenti, caratteristiche che considero fondamentali nel mondo lavorativo di oggi.<br>
+                    
+                    <br>Il mio obiettivo è sempre quello di portare valore aggiunto attraverso il mio impegno, la responsabilità e la serietà nel lavoro. Spero che, visitando il mio profilo, tu possa riconoscere in me un professionista affidabile, competente e pronto a contribuire con entusiasmo ai progetti più sfidanti.<br>
+                    
+                    <br>Ti ringrazio per il tempo dedicato a conoscere chi sono. Non esitare a contattarmi per qualsiasi opportunità o collaborazione.
+                </p>
+            </div>
+            <div class="quote-centered">
+                <p>“Intelligence is the ability to adapt to change.”</p>
+                </div>
+            <div class="hero-buttons">
+                <a href="about.html" class="btn"> Chi sono </a>
+                <a href="Formazione.html" class="btn"> Formazione </a>
+                <a href="Competenze.html" class="btn"> Competenze </a>
+                <a href="Contatti.html" class="btn"> Contatti </a>
+            </div>
+         </header>
+
+         <!-- Sezione Progetti -->
+         <section class="projects">
+            <h2 class="section-title"> Progetti </h2>
+            <div class="projects-grid">
+                <div class="project-box">
+                    <h3> Vicios y Virtudes </h3>
+                    <p> Mi sono occupato del disegno e della realizzazione del sito web
+                    <br>Progetto realizzato durante l'Erasmus presso la UPV (Valencia, Spagna)</p>
+                    <a href="https://marialomper.com/2-vicios-y-virtudes-1" target="_blank"><img src="Images/ViciosyVirtudes.png" alt="Immagine di copertina di Vicios y Virtudes"></a>
+                </div>
+                <div class="project-box">
+                    <h3> Art Connection FVG </h3>
+                    <p> Ho creato il sito web dell'associazione Art Connection FVG </p>
+                    <a href="https://www.artconnectionfvg.com" target="_blank"><img src="Images/Logo sfondo bianco.png" alt="Logo Art Connection FVG"></a>
+                </div>
+                <div class="project-box">
+                    <h3> Meeting Internazione di Atletica Leggera </h3>
+                    <p> Mi sono occupato della realizzazione e gestione del sito web </p>
+                    <a href="https://www.meetinglignano.com" target="_blank"><img src="Images/MeetingLignano2025-grafica-istituzionale-nuova-header-sito.png.webp" alt="Locandina Meeting Internazione di atletica leggera di Lignano Sabbiadoro (UD)"></a>
+                </div>
+            </div>
+         </section>
+         
+        <!-- Footer -->
+        <footer class="site-footer">
+            <p>Non hai un account? <a href="register.html">Registrati</a></p>
+            <div class="footer-login">
+            <form action="login.php" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            </div>
+            <p class="footer-copy" style="color: black;">&copy; 2025 Omar Eduardo Borges Montero. Tutti i diritti riservati.</p>
+        </footer>
+
+         <script>
+            function acceptCookies() {
+                document.cookie = "accepted_cookies=true; path=/; max-age=" + 60 * 60 * 24 * 365; // 1 anno
+                document.getElementById("cookie-banner").style.display = "none";
+
+                fetch("accept_cookie.php", {
+                    method: "POST"
+                }).then(response => {
+                    if (!response.ok) {
+                        console.error("❌ Errore nella richiesta", response.status);
+                    } else {
+                        console.log("✅ Cookie accettato, richiesta registrata");
+                    }
+                }).catch(err => {
+                    console.error("❌ Errore di rete:", err);
+                });
+            }
+
+            window.onload = function () {
+                if (!document.cookie.includes("accepted_cookies")) {
+                    document.getElementById("cookie-banner").style.display = "block";
+                }
+            };
+        </script>
+    </body>
+</html>
