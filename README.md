@@ -15,50 +15,6 @@ Developed using **PHP, HTML, CSS, JavaScript, MySQL**, and **Python** (for stega
 
 ---
 
-## 🖼️ Technical Screenshot Gallery
-
-<p align="center">
-  <img src="assets/Schermata%20SecureCV.png" width="600" alt="Main Screen">
-  <br><em>Main dashboard of SecureCV</em>
-</p>
-
-<p align="center">
-  <img src="assets/Schermata%20SecureCV-2.png" width="600" alt="Homepage View">
-  <br><em>Homepage with dynamic portfolio sections</em>
-</p>
-
-<p align="center">
-  <img src="assets/Schermata%203.png" width="600" alt="Alternate Screen">
-  <br><em>Interactive content area and visual CV elements</em>
-</p>
-
-<p align="center">
-  <img src="assets/Area%20riservata.png" width="600" alt="Reserved Area">
-  <br><em>Restricted access area for authenticated users</em>
-</p>
-
-<p align="center">
-  <img src="assets/Area%20riservata2.png" width="600" alt="Reserved Area 2">
-  <br><em>Protected document section and download tracking</em>
-</p>
-
-<p align="center">
-  <img src="assets/Password%20criptate.png" width="600" alt="Encrypted Passwords">
-  <br><em>Database view — passwords hashed and secured</em>
-</p>
-
-<p align="center">
-  <img src="assets/Messaggi%20in%20chiaro.png" width="600" alt="Unencrypted Messages">
-  <br><em>Contact form before AES encryption</em>
-</p>
-
-<p align="center">
-  <img src="assets/Messaggio%20criptatp.png" width="600" alt="Encrypted Messages">
-  <br><em>Encrypted messages stored in the database</em>
-</p>
-
----
-
 ## 🎯 Main Objectives
 
 1. **User authentication and registration**  
